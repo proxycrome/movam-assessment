@@ -1,0 +1,69 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    width: 90%;
+    height: 90vh;
+    background-color: #02044A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-view {
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 500px;
+    height: 90%;
+    background: white;
+    border-radius: 20px;
+}
+
+form {
+    padding: 30px
+}
+
+.group {
+    position: relative;
+}
+
+.group input {
+    padding-left: 40px
+}
+
+.group textarea {
+    min-height: 150px;
+    background-color: #F9F9FB;
+}
+
+.icon {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.button-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-box button {
+    padding: 10px 30px;
+}
+
+@media (max-width: 900px) {
+    .back{
+        flex-direction: column;
+        height: 100%;
+    }
+}

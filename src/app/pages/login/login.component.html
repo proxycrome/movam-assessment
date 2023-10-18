@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <div class="back">
+        <app-left-view></app-left-view>
+        <div class="right-view">
+            <div class="login-box">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group  mb-2">
+                        <label for="id">Your Name</label>
+                        <div class="group">
+                            <input type="text" class="form-control" formControlName="name"/>
+                            <i class="fa fa-user-o icon" aria-hidden="true"></i>
+                        </div>
+                        <span class="help-block text-danger"
+                            *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched">
+                            <small *ngIf="loginForm.get('name')?.errors?.['required']">
+                                Name is required
+                            </small>
+                        </span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="id">Mail</label>
+                        <div class="group">
+                            <input type="text" class="form-control" formControlName="email"/>
+                            <i class="fa fa-envelope-o icon" aria-hidden="true"></i> 
+                        </div>
+                        <small class="help-block text-danger"
+                            *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
+                            Please enter valid Email
+                        </small>
+                    </div>
+                    <div class="form-group group mb-2">
+                        <label for="id">Message</label>
+                        <textarea placeholder="Message" class="form-control" formControlName="message"></textarea>
+                        <span class="help-block text-danger"
+                            *ngIf="!loginForm.get('message')?.valid && loginForm.get('message')?.touched">
+                            <small *ngIf="loginForm.get('message')?.errors?.['required']">
+                                Message is required
+                            </small>
+                        </span>
+                    </div>
+                    <div class="button-box">
+                        <button type="submit" class="btn btn-primary">Send Message</button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
